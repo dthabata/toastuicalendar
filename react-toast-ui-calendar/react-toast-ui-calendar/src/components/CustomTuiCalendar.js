@@ -300,13 +300,13 @@ const CustomTuiCalendar = forwardRef(
 
             if (isAllDay) {
               return (
-                moment(start).format('YYYY/MM/DD') +
-                (isSameDate ? '' : ' - ' + moment(end).format('YYYY/MM/DD'))
+                moment(start).format('DD/MM/YYYY') +
+                (isSameDate ? '' : ' - ' + moment(end).format('DD/MM/YYYY'))
               )
             }
 
             return (
-              moment(start.toDate()).format('YYYY/MM/DD HH:mm') +
+              moment(start.toDate()).format('DD/MM/YYYY HH:mm') +
               ' - ' +
               moment(end.toDate()).format(endFormat)
             )
