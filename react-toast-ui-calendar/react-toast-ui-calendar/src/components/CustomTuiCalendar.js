@@ -71,7 +71,7 @@ const CustomTuiCalendar = forwardRef(
             )
           },
           milestoneTitle: function () {
-            return '<span class="tui-full-calendar-left-content">Marco de tempo</span>'
+            return '<span class="tui-full-calendar-left-content">Milestone</span>'
           },
           task: function (schedule) {
             return '#' + schedule.title
@@ -166,7 +166,7 @@ const CustomTuiCalendar = forwardRef(
             switch (viewName) {
               case 'milestone':
                 title =
-                  '<span class="tui-full-calendar-left-content">Marco de tempo</span>'
+                  '<span class="tui-full-calendar-left-content">Milestone</span>'
                 break
               case 'task':
                 title =
@@ -377,7 +377,6 @@ const CustomTuiCalendar = forwardRef(
         // open detail view
       })
       calendarInstRef.current.on('clickDayname', function (event) {
-        // console.log("clickDayname", event);
         if (calendarInstRef.current.getViewName() === 'week') {
           calendarInstRef.current.setDate(new Date(event.date))
           calendarInstRef.current.changeView('day', true)
@@ -385,13 +384,11 @@ const CustomTuiCalendar = forwardRef(
       })
 
       calendarInstRef.current.on('clickMore', function (event) {
-        // console.log("clickMore", event.date, event.target);
       })
 
       calendarInstRef.current.on(
         'clickTimezonesCollapseBtn',
         function (timezonesCollapsed) {
-          // console.log(timezonesCollapsed);
         }
       )
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useRef } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
