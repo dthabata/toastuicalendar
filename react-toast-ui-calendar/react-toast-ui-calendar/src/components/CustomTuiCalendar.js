@@ -40,7 +40,7 @@ const CustomTuiCalendar = forwardRef(
     const [workweek, setWorkweek] = useState(true)
     const [narrowWeekend, setNarrowWeekend] = useState(true)
     const [startDayOfWeek, setStartDayOfWeek] = useState(1)
-    const [type, setType] = useState('Weekly')
+    const [type, setType] = useState('Semana')
     const [checkedCalendars, setCheckedCalendars] = useState(
       calendars.map((element) => ({ ...element, isChecked: true }))
     )
@@ -70,19 +70,19 @@ const CustomTuiCalendar = forwardRef(
             )
           },
           milestoneTitle: function () {
-            return '<span class="tui-full-calendar-left-content">MILESTONE</span>'
+            return '<span class="tui-full-calendar-left-content">Marco de tempo</span>'
           },
           task: function (schedule) {
             return '#' + schedule.title
           },
           taskTitle: function () {
-            return '<span class="tui-full-calendar-left-content">TASK</span>'
+            return '<span class="tui-full-calendar-left-content">Evento</span>'
           },
           allday: function (schedule) {
             return _getTimeTemplate(schedule, true)
           },
           alldayTitle: function () {
-            return '<span class="tui-full-calendar-left-content">ALL DAY</span>'
+            return '<span class="tui-full-calendar-left-content">Dia inteiro</span>'
           },
           time: function (schedule) {
             return _getTimeTemplate(schedule, false)
@@ -165,15 +165,15 @@ const CustomTuiCalendar = forwardRef(
             switch (viewName) {
               case 'milestone':
                 title =
-                  '<span class="tui-full-calendar-left-content">MILESTONE</span>'
+                  '<span class="tui-full-calendar-left-content">Marco de tempo</span>'
                 break
               case 'task':
                 title =
-                  '<span class="tui-full-calendar-left-content">TASK</span>'
+                  '<span class="tui-full-calendar-left-content">Evento</span>'
                 break
               case 'allday':
                 title =
-                  '<span class="tui-full-calendar-left-content">ALL DAY</span>'
+                  '<span class="tui-full-calendar-left-content">Dia inteiro</span>'
                 break
               default:
                 break
@@ -318,19 +318,19 @@ const CustomTuiCalendar = forwardRef(
           // 	return 'Staff : ' + (schedule.attendees || []).join(', ')
           // },
           popupDetailState: function (schedule) {
-            return 'State : ' + schedule.state || 'Busy'
+            return 'Estado : ' + schedule.state || 'Ocupado'
           },
           popupDetailRepeat: function (schedule) {
-            return 'Repeat : ' + schedule.recurrenceRule
+            return 'Repete : ' + schedule.recurrenceRule
           },
           popupDetailBody: function (schedule) {
-            return 'Body : ' + schedule.body
+            return 'Corpo do texto : ' + schedule.body
           },
           popupEdit: function () {
-            return 'Edit'
+            return 'Editar'
           },
           popupDelete: function () {
-            return 'Delete'
+            return 'Deletar'
           },
         },
         // template: {
@@ -429,23 +429,23 @@ const CustomTuiCalendar = forwardRef(
 
       var html = []
       if (viewName === 'day') {
-        html.push(currentCalendarDate('YYYY.MM.DD'))
+        html.push(currentCalendarDate('DD.MM.YYYY'))
       } else if (
         viewName === 'month' &&
         (!options.month.visibleWeeksCount ||
           options.month.visibleWeeksCount > 4)
       ) {
-        html.push(currentCalendarDate('YYYY.MM'))
+        html.push(currentCalendarDate('MM.YYYY'))
       } else {
         html.push(
           moment(calendarInstRef.current.getDateRangeStart().getTime()).format(
-            'YYYY.MM.DD'
+            'DD.MM.YYYY'
           )
         )
         html.push(' ~ ')
         html.push(
           moment(calendarInstRef.current.getDateRangeEnd().getTime()).format(
-            'MM.DD'
+            'DD.MM'
           )
         )
       }
@@ -632,7 +632,7 @@ const CustomTuiCalendar = forwardRef(
                     onChange={handleAllChecked}
                   />
                   <span />
-                  View all
+                  Ver todos
                 </label>
               </div>
             </div>
@@ -683,7 +683,7 @@ const CustomTuiCalendar = forwardRef(
                       data-action='toggle-daily'
                     >
                       <i className='calendar-icon ic_view_day' />
-                      Daily
+                      Dia
                     </a>
                   </li>
                   <li role='presentation'>
@@ -692,7 +692,7 @@ const CustomTuiCalendar = forwardRef(
                       onClick={(e) => {
                         e.preventDefault()
                         calendarInstRef.current.changeView('week', true)
-                        setType('Weekly')
+                        setType('Semana')
                         setOpen(false)
                       }}
                       className='dropdown-menu-title'
@@ -700,7 +700,7 @@ const CustomTuiCalendar = forwardRef(
                       data-action='toggle-weekly'
                     >
                       <i className='calendar-icon ic_view_week' />
-                      Weekly
+                      Semana
                     </a>
                   </li>
                   <li role='presentation'>
@@ -721,7 +721,7 @@ const CustomTuiCalendar = forwardRef(
                       data-action='toggle-monthly'
                     >
                       <i className='calendar-icon ic_view_month' />
-                      Month
+                      Mês
                     </a>
                   </li>
                   <li role='presentation'>
@@ -734,14 +734,14 @@ const CustomTuiCalendar = forwardRef(
                           true
                         ) // or null
                         calendarInstRef.current.changeView('month', true)
-                        setType('2 weeks')
+                        setType('2 semanas')
                         setOpen(false)
                       }}
                       className='dropdown-menu-title'
                       role='menuitem'
                       data-action='toggle-weeks2'
                     >
-                      <i className='calendar-icon ic_view_week' />2 weeks
+                      <i className='calendar-icon ic_view_week' />2 semanas
                     </a>
                   </li>
                   <li role='presentation'>
@@ -754,14 +754,14 @@ const CustomTuiCalendar = forwardRef(
                           true
                         ) // or null
                         calendarInstRef.current.changeView('month', true)
-                        setType('3 weeks')
+                        setType('3 semanas')
                         setOpen(false)
                       }}
                       className='dropdown-menu-title'
                       role='menuitem'
                       data-action='toggle-weeks3'
                     >
-                      <i className='calendar-icon ic_view_week' />3 weeks
+                      <i className='calendar-icon ic_view_week' />3 semanas
                     </a>
                   </li>
                   <li role='presentation' className='dropdown-divider' />
@@ -795,7 +795,7 @@ const CustomTuiCalendar = forwardRef(
                         onChange={() => {}}
                       />
                       <span className='checkbox-title' />
-                      Show weekends
+                      Mostrar fins de semana
                     </a>
                   </li>
                   <li role='presentation'>
@@ -828,7 +828,7 @@ const CustomTuiCalendar = forwardRef(
                         onChange={() => {}}
                       />
                       <span className='checkbox-title' />
-                      Start Week on Monday
+                      Começar semana na segunda-feira
                     </a>
                   </li>
                   <li role='presentation'>
@@ -861,7 +861,7 @@ const CustomTuiCalendar = forwardRef(
                         onChange={() => {}}
                       />
                       <span className='checkbox-title' />
-                      Narrower than weekdays
+                      Finais de semana completos
                     </a>
                   </li>
                 </ul>
@@ -878,7 +878,7 @@ const CustomTuiCalendar = forwardRef(
                     setRenderRangeText()
                   }}
                 >
-                  Today
+                  Hoje
                 </button>
                 <button
                   type='button'

@@ -195,7 +195,6 @@ export default function CustomTuiModal({
             </ul>
           </div>
         </div>
-        {/* Subject */}
         <div className='tui-full-calendar-popup-section'>
           <div className='tui-full-calendar-popup-section-item tui-full-calendar-section-location'>
             <span className='tui-full-calendar-icon tui-full-calendar-ic-title' />
@@ -203,7 +202,7 @@ export default function CustomTuiModal({
               ref={subjectRef}
               id='tui-full-calendar-schedule-title'
               className='tui-full-calendar-content'
-              placeholder='Subject'
+              placeholder='Evento'
               value={title}
               onChange={(e) => {
                 setTitle(e.target.value)
@@ -230,7 +229,6 @@ export default function CustomTuiModal({
             // language="ko"
           />
         </div>
-
         <button
           onClick={() => {
             toggle()
