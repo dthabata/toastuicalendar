@@ -292,7 +292,8 @@ export default function App() {
             event?.triggerEventName === 'mouseup'
               ? handleCreateSchedule
               : handleUpdateSchedule,
-          submitText: event?.triggerEventName === 'mouseup' ? 'Save' : 'Update',
+          submitText:
+            event?.triggerEventName === 'mouseup' ? 'Salvar' : 'Atualizar',
           calendars: formatCalendars,
           attendees,
           schedule: event?.schedule,

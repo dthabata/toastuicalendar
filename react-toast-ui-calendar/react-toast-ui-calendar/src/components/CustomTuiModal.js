@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import { Modal } from 'reactstrap'
 
@@ -7,7 +8,7 @@ export default function CustomTuiModal({
   isOpen = false,
   toggle,
   onSubmit,
-  submitText = 'Save',
+  submitText = 'Salvar',
   calendars = [],
   attendees = [],
   schedule,
@@ -226,7 +227,6 @@ export default function CustomTuiModal({
               setStart(e[0])
               setEnd(e[1])
             }}
-            // language="ko"
           />
         </div>
         <button

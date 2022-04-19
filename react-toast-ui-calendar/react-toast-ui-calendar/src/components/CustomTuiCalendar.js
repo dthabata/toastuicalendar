@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {
   useRef,
   useLayoutEffect,
@@ -540,16 +541,12 @@ const CustomTuiCalendar = forwardRef(
     // };
 
     function createSchedule(schedule) {
-      console.log('createSchedule')
-
       calendarInstRef.current.createSchedules([schedule])
       const cloneFilterSchedules = [...filterSchedules]
       setFilterSchedules((prevState) => [...cloneFilterSchedules, schedule])
     }
 
     function updateSchedule(schedule, changes) {
-      console.log('updateSchedule')
-
       calendarInstRef.current.updateSchedule(
         schedule.id,
         schedule.calendarId,
@@ -567,8 +564,6 @@ const CustomTuiCalendar = forwardRef(
     }
 
     function deleteSchedule(schedule) {
-      console.log('deleteSchedule')
-
       calendarInstRef.current.deleteSchedule(schedule.id, schedule.calendarId)
       const cloneFilterSchedules = [...filterSchedules]
       setFilterSchedules((prevState) =>
@@ -675,7 +670,7 @@ const CustomTuiCalendar = forwardRef(
                       onClick={(e) => {
                         e.preventDefault()
                         calendarInstRef.current.changeView('day', true)
-                        setType('Daily')
+                        setType('Dia')
                         setOpen(false)
                       }}
                       className='dropdown-menu-title'
@@ -713,7 +708,7 @@ const CustomTuiCalendar = forwardRef(
                           true
                         ) // or null
                         calendarInstRef.current.changeView('month', true)
-                        setType('Month')
+                        setType('Mês')
                         setOpen(false)
                       }}
                       className='dropdown-menu-title'
@@ -886,7 +881,6 @@ const CustomTuiCalendar = forwardRef(
                   style={{ marginRight: '6px' }}
                   data-action='move-prev'
                   onClick={() => {
-                    // console.log("pre");
                     calendarInstRef.current.prev()
                     setRenderRangeText()
                   }}
