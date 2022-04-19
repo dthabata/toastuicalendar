@@ -653,6 +653,7 @@
   .tui-full-calendar-section-title input {
     width: 365px;
   }
+
   .tui-full-calendar-button.tui-full-calendar-section-private {
     height: 32px;
     padding: 8px;
@@ -924,7 +925,6 @@
     background: transparent;
   }
   .tui-datepicker {
-    left: -12px;
     z-index: 1;
     border-color: #d5d5d5;
   }
