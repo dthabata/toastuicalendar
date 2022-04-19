@@ -10,11 +10,11 @@ const end = new Date(new Date().setMinutes(start.getMinutes() + 60))
 const attendees = [
   {
     id: '1',
-    name: 'Unidade 1',
+    name: 'Loja 1',
   },
-  { id: '2', name: 'Unidade 2' },
-  { id: '3', name: 'Unidade 3' },
-  { id: '4', name: 'Unidade 4' },
+  { id: '2', name: 'Loja 2' },
+  { id: '3', name: 'Loja 3' },
+  { id: '4', name: 'Loja 4' },
 ]
 const schedules = [
   {

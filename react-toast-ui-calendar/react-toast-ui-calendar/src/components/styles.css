@@ -631,7 +631,8 @@
     clear: both;
   }
   .tui-full-calendar-popup-container {
-    min-width: 474px;
+    min-width: 100%;
+    min-height: fit-content;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border: solid 1px #d5d5d5;
@@ -768,6 +769,7 @@
   }
   .tui-full-calendar-dropdown-button.tui-full-calendar-popup-section-item {
     height: 32px;
+    width: 100%;
     font-size: 0;
     top: -1px;
   }
@@ -1076,6 +1078,7 @@
     min-height: 14px;
     line-height: 24px;
     padding: 10px;
+    margin-top: 5px;
   }
   .lnb-footer {
     color: #999;
