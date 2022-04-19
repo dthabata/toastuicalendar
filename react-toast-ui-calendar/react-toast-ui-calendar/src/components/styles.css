@@ -887,21 +887,24 @@
   }
   input[type="checkbox"].tui-full-calendar-checkbox-square {
     display: none;
+    margin-left: 8px;
   }
   input[type="checkbox"].tui-full-calendar-checkbox-square + span {
     display: inline-block;
     cursor: pointer;
     line-height: 14px;
-    margin-right: 8px;
     width: 14px;
     height: 14px;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAADpJREFUKBVjPHfu3O5///65MJAAmJiY9jCcOXPmP6kApIeJBItQlI5qRAkOVM5o4KCGBwqPkcxEvhsAbzRE+Jhb9IwAAAAASUVORK5CYII=)
       no-repeat;
     vertical-align: middle;
+    margin-left: 8px;
   }
   input[type="checkbox"].tui-full-calendar-checkbox-square:checked + span {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAMBJREFUKBWVkjEOwjAMRe2WgZW7IIHEDdhghhuwcQ42rlJugAQS54Cxa5cq1QM5TUpByZfS2j9+dlJVt/tX5ZxbS4ZU9VLkQvSHKTIGRaVJYFmKrBbTCJxE2UgCdDzMZDkHrOV6b95V0US6UmgKodujEZbJg0B0ZgEModO5lrY1TMQf1TpyJGBEjD+E2NPN7ukIUDiF/BfEXgRiGEw8NgkffYGYwCi808fpn/6OvfUfsDr/Vc1IfRf8sKnFVqeiVQfDu0tf/nWH9gAAAABJRU5ErkJggg==)
       no-repeat;
+    margin-left: 8px;
+
   }
   input[type="checkbox"].tui-full-calendar-checkbox-round {
     display: none;
@@ -1060,7 +1063,7 @@
     font-weight: bold;
   }
   .lnb-calendars > div {
-    padding: 12px 16px;
+    padding-top: 5px;
     font-weight: normal;
   }
   .lnb-calendars-d1 {
@@ -1071,15 +1074,14 @@
   }
   .lnb-calendars-item {
     min-height: 14px;
-    line-height: 14px;
-    padding: 8px 0;
+    line-height: 24px;
+    padding: 10px;
   }
   .lnb-footer {
     color: #999;
     font-size: 11px;
     position: absolute;
     bottom: 12px;
-    padding-left: 16px;
   }
   #menu {
     padding: 15px;

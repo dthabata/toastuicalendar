@@ -10,11 +10,11 @@ const end = new Date(new Date().setMinutes(start.getMinutes() + 60))
 const attendees = [
   {
     id: '1',
-    name: 'Chin',
+    name: 'Unidade 1',
   },
-  { id: '2', name: 'Khanh' },
-  { id: '3', name: 'Linh' },
-  { id: '4', name: 'Hai' },
+  { id: '2', name: 'Unidade 2' },
+  { id: '3', name: 'Unidade 3' },
+  { id: '4', name: 'Unidade 4' },
 ]
 const schedules = [
   {
@@ -114,27 +114,19 @@ const colors = [
 const calendars = [
   {
     id: '1',
-    name: 'BPA Technical',
+    name: 'Datas comemorativas',
   },
   {
     id: '2',
-    name: 'Aqua 2 Cleaning',
+    name: 'Campanhas de Incentivo',
   },
   {
     id: '3',
-    name: 'Aqua 4 Cleaning',
+    name: 'GDTV',
   },
   {
     id: '4',
-    name: 'Luxury 6 Cleaning',
-  },
-  {
-    id: '5',
-    name: 'Luxury 6 Management',
-  },
-  {
-    id: '6',
-    name: 'Aqua 3 Management',
+    name: 'Meta de posts',
   },
 ]
 
