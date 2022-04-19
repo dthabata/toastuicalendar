@@ -223,7 +223,6 @@ export default function CustomTuiModal({
               inputType: 'spinbox',
             }}
             onChange={(e) => {
-              // console.log(e[0], e[1])
               setStart(e[0])
               setEnd(e[1])
             }}
