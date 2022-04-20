@@ -1015,6 +1015,7 @@
   }
   #lnb {
     position: absolute;
+    height: 990px;
     width: 200px;
     top: 0px;
     bottom: 0;
@@ -1257,4 +1258,16 @@
   #endpicker-container .tui-datepicker.tui-rangepicker, #startpicker-container .tui-datepicker.tui-rangepicker {
     position: relative;
     left: 0;
+  }
+  .modal-open .modal {
+    height: 850px;
+  }
+  .tui-full-calendar-timegrid-h-grid {
+    border-bottom: 1px solid rgb(229, 229, 229);
+  }
+  .tui-view-13 {
+    height: max-content;
+  }
+  .tui-full-calendar-layout .tui-view-25 {
+    margin-top: 50px;
   }

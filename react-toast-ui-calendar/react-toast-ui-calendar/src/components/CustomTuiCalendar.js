@@ -17,7 +17,7 @@ import './styles.css'
 const CustomTuiCalendar = forwardRef(
   (
     {
-      height = '800px',
+      height = '900px',
       defaultView = 'week',
       calendars = [],
       schedules = [],
@@ -383,13 +383,11 @@ const CustomTuiCalendar = forwardRef(
         }
       })
 
-      calendarInstRef.current.on('clickMore', function (event) {
-      })
+      calendarInstRef.current.on('clickMore', function (event) {})
 
       calendarInstRef.current.on(
         'clickTimezonesCollapseBtn',
-        function (timezonesCollapsed) {
-        }
+        function (timezonesCollapsed) {}
       )
 
       calendarInstRef.current.on('afterRenderSchedule', function (event) {
