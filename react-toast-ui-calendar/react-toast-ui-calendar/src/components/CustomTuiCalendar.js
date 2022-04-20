@@ -104,7 +104,6 @@ const CustomTuiCalendar = forwardRef(
           },
           monthMoreTitleDate: function (date, dayname) {
             var day = date.split('.')[2]
-
             return (
               '<span class="tui-full-calendar-month-more-title-day">' +
               day +
@@ -119,7 +118,6 @@ const CustomTuiCalendar = forwardRef(
           monthGridHeader: function (dayModel) {
             var date = parseInt(dayModel.date.split('-')[2], 10)
             var classNames = ['tui-full-calendar-weekday-grid-date']
-
             if (dayModel.isToday) {
               classNames.push('tui-full-calendar-weekday-grid-date-decorator')
             }
@@ -142,7 +140,33 @@ const CustomTuiCalendar = forwardRef(
             return ''
           },
           monthDayname: function (model) {
-            return model.label.toString().toLocaleUpperCase()
+            var label = model.label
+            switch (label) {
+              case 'Sun':
+                label = 'Dom'
+                break
+              case 'Mon':
+                label = 'Seg'
+                break
+              case 'Tue':
+                label = 'Ter'
+                break
+              case 'Wed':
+                label = 'Qua'
+                break
+              case 'Thu':
+                label = 'Qui'
+                break
+              case 'Fri':
+                label = 'Sex'
+                break
+              case 'Sat':
+                label = 'Sáb'
+                break
+              default:
+                break
+            }
+            return label.toString().toLocaleUpperCase()
           },
           weekDayname: function (model) {
             var dayName = model.dayName
