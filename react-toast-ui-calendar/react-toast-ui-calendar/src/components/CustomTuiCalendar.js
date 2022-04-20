@@ -118,7 +118,7 @@ const CustomTuiCalendar = forwardRef(
           },
           monthGridHeader: function (dayModel) {
             var date = parseInt(dayModel.date.split('-')[2], 10)
-            var classNames = ['tui-full-calendar-weekday-grid-date ']
+            var classNames = ['tui-full-calendar-weekday-grid-date']
 
             if (dayModel.isToday) {
               classNames.push('tui-full-calendar-weekday-grid-date-decorator')
@@ -145,23 +145,59 @@ const CustomTuiCalendar = forwardRef(
             return model.label.toString().toLocaleUpperCase()
           },
           weekDayname: function (model) {
-            return (
-              '<span class="tui-full-calendar-dayname-date">' +
-              model.date +
-              '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">' +
-              model.dayName +
-              '</span>'
-            )
+            var dayName = model.dayName
+            switch (dayName) {
+              case 'Sun':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Dom</span>'
+                break
+              case 'Mon':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Seg</span>'
+                break
+              case 'Tue':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Ter</span>'
+                break
+              case 'Wed':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Qua</span>'
+                break
+              case 'Thu':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Qui</span>'
+                break
+              case 'Fri':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Sex</span>'
+                break
+              case 'Sat':
+                dayName =
+                  '<span class="tui-full-calendar-dayname-date">' +
+                  model.date +
+                  '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">Sáb</span>'
+                break
+              default:
+                break
+            }
+            return dayName
           },
           weekGridFooterExceed: function (hiddenSchedules) {
             return '+' + hiddenSchedules
           },
           dayGridTitle: function (viewName) {
-            // use another functions instead of 'dayGridTitle'
-            // milestoneTitle: function() {...}
-            // taskTitle: function() {...}
-            // alldayTitle: function() {...}
-
             var title = ''
             switch (viewName) {
               case 'milestone':
@@ -179,38 +215,8 @@ const CustomTuiCalendar = forwardRef(
               default:
                 break
             }
-
             return title
           },
-          // schedule: function(schedule) {
-          //   // use another functions instead of 'schedule'
-          //   // milestone: function() {...}
-          //   // task: function() {...}
-          //   // allday: function() {...}
-
-          //   var tpl;
-
-          //   switch (category) {
-          //     case "milestone":
-          //       tpl =
-          //         '<span class="calendar-font-icon ic-milestone-b"></span> <span style="background-color: ' +
-          //         schedule.bgColor +
-          //         '">' +
-          //         schedule.title +
-          //         "</span>";
-          //       break;
-          //     case "task":
-          //       tpl = "#" + schedule.title;
-          //       break;
-          //     case "allday":
-          //       tpl = _getTimeTemplate(schedule, true);
-          //       break;
-          //     default:
-          //       break;
-          //   }
-
-          //   return tpl;
-          // },
           collapseBtnTitle: function () {
             return '<span class="tui-full-calendar-icon tui-full-calendar-ic-arrow-solid-top"></span>'
           },
