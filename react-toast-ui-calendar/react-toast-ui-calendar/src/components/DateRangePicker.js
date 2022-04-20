@@ -96,7 +96,11 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
             id='endpicker-input'
             ref={endPickerInputRef}
           />
-          <div id='endpicker-container' ref={endPickerContainerRef} />
+          <div
+            // className='date-range-picker-container'
+            id='endpicker-container'
+            ref={endPickerContainerRef}
+          />
         </div>
       </div>
     </div>

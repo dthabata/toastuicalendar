@@ -352,6 +352,7 @@
     background-color: #fff;
     border: 1px solid #aaa;
     width: 274px;
+    height: 330px;
   }
   .tui-calendar * {
     -webkit-box-sizing: border-box;
@@ -925,6 +926,7 @@
     background: transparent;
   }
   .tui-datepicker {
+    left: 222px;
     z-index: 1;
     border-color: #d5d5d5;
   }
@@ -1237,4 +1239,22 @@
   }
   .open > .dropdown-menu {
     display: block;
+  }
+  #endpicker-container, #startpicker-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+  }
+  #startpicker-container {
+    align-items: flex-start;
+  }
+  #endpicker-container {
+    align-items: flex-end;
+  }
+  #endpicker-container .tui-datepicker.tui-rangepicker, #startpicker-container .tui-datepicker.tui-rangepicker {
+    position: relative;
+    left: 0;
   }
