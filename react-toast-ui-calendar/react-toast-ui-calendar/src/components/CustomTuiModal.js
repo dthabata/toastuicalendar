@@ -144,7 +144,7 @@ export default function CustomTuiModal({
                 >
                   <span
                     className='tui-full-calendar-icon tui-full-calendar-calendar-dot'
-                    style={{ backgroundColor: element.bgColor }}
+                    style={{ backgroundColor: 'red' }}
                   />
                   <span className='tui-full-calendar-content'>
                     {element.name}

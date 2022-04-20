@@ -1271,9 +1271,8 @@
   .tui-full-calendar-layout .tui-view-25 {
     margin-top: 50px;
   }
- .tui-full-calendar-holiday-sun
  .tui-full-calendar-dayname-date-area {
-    color: #bbb !important;
+    color: #333 !important;
     font-weight: normal;
   }
   .tui-full-calendar-month-dayname-item .tui-full-calendar-holiday-sun {
