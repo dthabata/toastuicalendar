@@ -19,6 +19,57 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
   const endPickerContainerRef = useRef(null)
   const endPickerInputRef = useRef(null)
 
+  DatePicker.localeTexts['pt-br'] = {
+    titles: {
+      // days
+      DD: [
+        'Domingo',
+        'Segunda',
+        'Terça-feira',
+        'Quarta-feira',
+        'Quinta-feira',
+        'Sexta-feira',
+        'Sábado',
+      ],
+      // daysShort
+      D: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+      // months
+      MMMM: [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho',
+        'Agosto',
+        'Setembro',
+        'Outubro',
+        'Novembro',
+        'Dezembro',
+      ],
+      // monthsShort
+      MMM: [
+        'Jan',
+        'Fev',
+        'Mar',
+        'Abr',
+        'Mai',
+        'Jun',
+        'Jul',
+        'Ago',
+        'Set',
+        'Out',
+        'Nov',
+        'Dez',
+      ],
+    },
+    titleFormat: 'MMM yyyy',
+    todayFormat: 'D, ' + 'dd/MM,' + ' yyyy',
+    date: 'Data',
+    time: 'Hora',
+  }
+
   useImperativeHandle(ref, () => ({
     setStartDate(start) {
       rangePicker.setStartDate(start)
@@ -44,6 +95,7 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
             input: endPickerInputRef.current || '#endpicker-input',
             container: endPickerContainerRef.current || '#endpicker-container',
           },
+          language: 'pt-br',
         })
       )
     } else {
@@ -78,7 +130,7 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
           <span className='tui-full-calendar-icon tui-full-calendar-ic-date' />
           <input
             className='tui-full-calendar-content'
-            placeholder='Start date'
+            placeholder='Data de início'
             id='startpicker-input'
             ref={startPickerInputRef}
           />
@@ -92,7 +144,7 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
           <span className='tui-full-calendar-icon tui-full-calendar-ic-date' />
           <input
             className='tui-full-calendar-content'
-            placeholder='End date'
+            placeholder='Data de término'
             id='endpicker-input'
             ref={endPickerInputRef}
           />
