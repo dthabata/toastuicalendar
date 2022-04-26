@@ -281,12 +281,14 @@ export default function App() {
         {...{
           isOpen: modal,
           toggle,
-          onSubmit:
+          /*           onSubmit:
             event?.triggerEventName === 'mouseup'
               ? handleCreateSchedule
               : handleUpdateSchedule,
           submitText:
-            event?.triggerEventName === 'mouseup' ? 'Salvar' : 'Atualizar',
+            event?.triggerEventName === 'mouseup' ? 'Salvar' : 'Atualizar', */
+          onSubmit: handleCreateSchedule,
+          submitText: 'Salvar',
           calendars: formatCalendars,
           attendees,
           schedule: event?.schedule,
