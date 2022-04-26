@@ -322,9 +322,9 @@ const CustomTuiCalendar = forwardRef(
           popupSave: function () {
             return 'Salvar'
           },
-          popupUpdate: function () {
+          /*           popupUpdate: function () {
             return 'Atualizar'
-          },
+          }, */
           popupDetailDate: function (isAllDay, start, end) {
             var isSameDate = moment(start).isSame(end)
             var endFormat = (isSameDate ? '' : 'DD/MM/YYYY ') + 'HH:mm'
