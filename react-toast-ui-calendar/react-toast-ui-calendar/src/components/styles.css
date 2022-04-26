@@ -110,6 +110,7 @@
   }
   button,
   input,
+  input:-internal-autofill-selected,
   select {
     font-family: inherit;
     font-size: inherit;
@@ -1284,3 +1285,8 @@
   .tui-full-calendar-none {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAIxJREFUKBVjYCATMKLrCw8P9/z3798soLgMVO4JExNT2sqVK7cjq2VC5oDYME2MjIyNIAwUkoGKoShlQeFBOGCbVq1a1QDihoaG1gMpmO0gITAAOzUsLGzr////vWCC+GigK7YBDfUGO5VYTSADYWox/IjPNmS5UY3IoYHGBgcOKG7QxPFxt+KTJCgHAGcZJbGLRuJ2AAAAAElFTkSuQmCC) !important;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+  
