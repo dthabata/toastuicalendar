@@ -19,7 +19,7 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
   const endPickerContainerRef = useRef(null)
   const endPickerInputRef = useRef(null)
 
-  DatePicker.localeTexts['pt-br'] = {
+  /*   DatePicker.localeTexts['pt-br'] = {
     titles: {
       // days
       DD: [
@@ -68,7 +68,7 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
     todayFormat: 'D, ' + 'dd/MM,' + ' yyyy',
     date: 'Data',
     time: 'Hora',
-  }
+  } */
 
   useImperativeHandle(ref, () => ({
     setStartDate(start) {
@@ -95,7 +95,7 @@ const TuiDateRangePicker = forwardRef((props, ref) => {
             input: endPickerInputRef.current || '#endpicker-input',
             container: endPickerContainerRef.current || '#endpicker-container',
           },
-          language: 'pt-br',
+          language: 'pt-BR',
         })
       )
     } else {
